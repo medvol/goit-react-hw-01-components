@@ -1,17 +1,18 @@
 import PropTypes from 'prop-types';
+import { Stats, Label, Quantity, StatsItem } from './UserStats.styled';
 
 export const UserStats = ({ stats }) => {
     const keys = Object.keys(stats); 
  
-    return (<ul>
+    return (<Stats>
         {keys.map((key, idx) => (          
-            <li key ={idx}>
-                <span>{key}</span>
-                <span>{stats[key]}</span>
-            </li>
+            <StatsItem key ={idx}>
+                <Label>{key}</Label>
+                <Quantity>{stats[key]}</Quantity>
+            </StatsItem>
         )             
         
-    )}</ul>)
+    )}</Stats>)
 }
 
 // export const UserStats = ({ stats: { followers, views, likes } }) => {
