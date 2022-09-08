@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
 export const UserInfo = styled.div`
-
-text-align: center;
-padding: ${p => p.theme.space[4]}px;
-
+    text-align: center;
+    padding: ${p => p.theme.space[4]}px;
 `
 
 export const UserImage = styled.img`
+    width: 100%;
     object-fit: cover;
     border: ${p => p.theme.borders.normal} ${p => p.theme.colors.black};
     border-radius: ${p => p.theme.radii.round};

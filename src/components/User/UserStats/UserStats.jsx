@@ -5,14 +5,23 @@ export const UserStats = ({ stats }) => {
     const keys = Object.keys(stats); 
  
     return (<Stats>
-        {keys.map((key, idx) => (          
-            <StatsItem key ={idx}>
-                <Label>{key}</Label>
-                <Quantity>{stats[key]}</Quantity>
-            </StatsItem>
-        )             
-        
-    )}</Stats>)
+                {keys.map((key, idx) => (          
+                    <StatsItem key ={idx}>
+                        <Label>{key}</Label>
+                        <Quantity>{stats[key]}</Quantity>
+                    </StatsItem>
+                )        
+                )}
+            </Stats>)
+}
+
+UserStats.propTypes = {
+    stats: PropTypes.exact ({
+        followers: PropTypes.number.isRequired,
+        views: PropTypes.number.isRequired,
+        likes: PropTypes.number.isRequired        
+                
+        })   
 }
 
 // export const UserStats = ({ stats: { followers, views, likes } }) => {
@@ -36,11 +45,3 @@ export const UserStats = ({ stats }) => {
 //     );
 // }
 
-UserStats.propTypes = {
-    stats: PropTypes.exact ({
-        followers: PropTypes.number.isRequired,
-        views: PropTypes.number.isRequired,
-        likes: PropTypes.number.isRequired          
-                
-        })   
-}

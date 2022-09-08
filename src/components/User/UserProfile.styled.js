@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Profile = styled.div`
-width: 250px;
+    width: 250px;
     text-align: center;
     padding: ${p => p.theme.space[4]}px;
     box-shadow: ${p => p.theme.shadows.card};

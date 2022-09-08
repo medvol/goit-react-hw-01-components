@@ -4,7 +4,7 @@ import {UserImage, UserName, Tag, Location, UserInfo} from './UserDescription.st
 export const UserDescription = ({ username, tag, location, avatar }) => {
     return (
         <UserInfo>
-            <UserImage src={avatar} alt={`${username} avatar`} width="250" />
+            <UserImage src={avatar} alt={`${username} avatar`} />
             <UserName>{username}</UserName>
             <Tag>{tag}</Tag>
             <Location>{location}</Location>
@@ -16,5 +16,4 @@ UserDescription.propTypes = {
     tag: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
     avatar: PropTypes.string.isRequired
-
 }
